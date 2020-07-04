@@ -1,0 +1,23 @@
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "g++ build active file",
+      "type": "shell",
+      "command": "cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j5",
+      "problemMatcher": []
+    },
+    {
+      "label": "g++ build - Full",
+      "type": "shell",
+      "command": "cd build && cmake .. && make -j5 && ./traffic_simulation ",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
